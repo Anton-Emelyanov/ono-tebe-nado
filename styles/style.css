@@ -1,18 +1,23 @@
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   padding: 92px 24px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 24px 91px 24px;
 }
 
 .header__menu {
-  display: flex;
-  
+  padding-left: 34px;
 }
 
 .header__links-list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  column-gap: 32px;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  list-style-type: circle;
 }
 
 .header__links-list-item {
@@ -21,51 +26,314 @@
 }
 
 .header__links-list-item_no-bullit {
-
+  list-style-type: none;
 }
 
 .header__link {
-display: block;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
 }
 
 .header__link_active {
-  
+  text-decoration: none;
+  pointer-events: none;
 }
 
 .header__logo {
-
+  display: flex;
+  justify-self: center;
+  width: 148px;
+  height: 105px;
+  margin-bottom: 2px;
 }
 
 .header__logo-image {
-  
-}
-
-.address {
-  font-size: 18px;
-  font-weight: 400;
+  object-fit: contain;
 }
 
 .header__address {
-
+  justify-self: end;
+  padding-right: 33px;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 135%;
 }
 
-.main {
-  padding: 0;
-  }
-  
 .cover {
-padding: 0;
+  background-image: url(/images/cover.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: auto;
+}
+
+.overley {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+  background-color: black;
+}
+
+.cover__title {
+  letter-spacing: 15px;
+  z-index: 1;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 100%;
+  color: #ffffff;
+  padding: 162px 49px 131px 47px;
+}
+
+.aligned-text {
+  display: block;
+  padding-bottom: 17px;
+  line-height: 115%;
+}
+
+.aligned-text_center {
+  display: block;
+  padding-bottom: 19px;
+  text-align: center;
+}
+
+.aligned-text_right {
+  display: block;
+  text-align: right;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 50px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
+.cover__description {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  position: relative;
+  align-items: center;
+  padding: 0 49px 48px 80px;
+}
+
+.cover__description-text {
+  text-transform: uppercase;
+  color: #ffffff;
+  word-spacing: 17px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 127.273%;
+  text-align: center;
+}
+
+.bet-button {
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  padding: 12px 29px 13px 30px;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
 }
 
 .lots {
-padding: 24px 0;
+  padding: 160px 24px 170px 24px;
+}
+
+.lots__heading {
+  text-transform: uppercase;
+  color: black;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 46.96px;
+  text-align: left;
+}
+
+.lots__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  list-style-type: none;
+}
+
+.lots__card-list-item {
+  flex-grow: 1;
+  width: 328px;
+  min-height: 554px;
+}
+
+.card-link {
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.card_type_film {
+  background-image: url(/images/card-lot-01.jpg);
+}
+
+.card__title {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration-line: underline;
+  padding: 48px 35px 0 39px;
+}
+
+.card__text {
+  z-index: 1;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #ffffff;
+  padding: 0 35px 46px 39px;
+}
+
+.card_type_book {
+  background-image: url(/images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+  background-image: url(/images/card-lot-03.jpg);
+}
+
+.lots__look-more-link {
+  display: block;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.48px;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  margin: 29px 0 0 39px;
 }
 
 .about {
-padding: 24px 0;
+  padding: 0 24px 180px 30;
+  display: grid;
+  column-gap: 25px;
+  grid-template-columns: 330px auto;
+  margin: auto;
+}
+
+.about__logo {
+  width: 240px;
+  height: 240px;
+  top: 35px;
+  left: 47px;
+  gap: 0px;
+  justify-self: center;
+  border-radius: 50%;
+  background-color: black;
+  justify-self: center;
+}
+
+.about__logo-image {
+  padding: 64px 47px 64px 47px;
+}
+
+.about__column {
+  color: black;
+}
+
+.about__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 46.96px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 95px;
+  margin-bottom: 100px;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
 }
 
 .footer {
-padding: 50px ;
-Height: 98px;
+  display: flex;
+  padding: 0 60px 90px 60px;
+  justify-content:space-between;
+  align-items: start;
+  margin-top: 150px;
+}
+
+.footer__address {
+  justify-self: start;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 135%;
+}
+
+.footer__menu {
+  justify-self: center;
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  list-style-type: none;
+}
+
+.footer__menu-list-item {
+  align-self: center;
+}
+
+.footer__menu-link {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: end;
+  column-gap: 46.5px;
+  list-style-type: none;
+}
+
+.footer__social-link {
+  display: flex;
+  width: 48px;
+}
+
+.footer__social-icon {
+  object-fit: contain;
 }
